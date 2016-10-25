@@ -1,0 +1,21 @@
+{
+  "name": "dent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Trys Mudford",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "compression": "^1.6.2",
+    "express": "^4.14.0",
+    "express-dustjs": "^1.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.10.2"
+  }
+}

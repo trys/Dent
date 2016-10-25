@@ -1,0 +1,6 @@
+{>"header"/}
+
+<h1>{title}</h1>
+<h2>Multiline</h2>
+
+{>"footer"/}
