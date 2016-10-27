@@ -61,9 +61,10 @@ var Dent = (function () {
 						Dent.Events.Create('dentFormSuccess');
 
 						var wrappedResponse = Dent.Interaction.WrapResponse(response);
-						var filteredResponse = Dent.Interaction.FindInElement(wrappedResponse, '#dent');
+						var filteredResponse = Dent.Interaction.FindInElement(wrappedResponse, '.comments li:last-child');
 						if ( filteredResponse ) {
-							Dent.Interaction.FindAndReplace($wrapper, filteredResponse);
+							console.log( $('.comments li:last-child') );
+							Dent.Interaction.FindAndAppend($('.comments li:last-child')[0], filteredResponse);
 						}
 					},
 					error: function (error) {
@@ -90,8 +91,20 @@ var Dent = (function () {
 			},
 
 			FindAndReplace: function(find, replace) {
-				console.log( replace, find );
+				if ( ! find ) return;
 				find.parentNode.replaceChild(replace, find);
+				Dent.Attach();
+			},
+
+			FindAndAppend: function(find, append) {
+				if ( ! find ) return;
+				find.parentNode.appendChild(append);
+				Dent.Attach();
+			},
+
+			FindAndPrepend: function(find, prepend) {
+				if ( ! find ) return;
+				find.parentNode.insertBefore(prepend, find.parentNode.firstChild);
 				Dent.Attach();
 			}
 
