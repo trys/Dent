@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js -e js,dust,json"
+    "start": "npm run server & npm run client",
+    "server": "nodemon index.js -e js,dust --ignore public/ --ignore src/",
+    "client": "simplifyify src/js/dent.js -o public/js/bundle.js -m -d -w"
   },
   "keywords": [],
   "author": "Trys Mudford",
@@ -18,6 +20,9 @@
     "sugar": "^2.0.1"
   },
   "devDependencies": {
-    "nodemon": "^1.10.2"
+    "concurrently": "^3.1.0",
+    "nodemon": "^1.10.2",
+    "reqwest": "^2.0.5",
+    "simplifyify": "^2.0.4"
   }
 }

@@ -1,3 +1,66 @@
+/* Reset */
 body {
-	background: #E6E6E6;
+	background:  #E6E6E6;
+	margin: 0;
+	font: 400 16px /1.4 "Roboto", -apple-system, BlinkMacSystemFont, 
+	    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", 
+	    "Fira Sans", "Droid Sans", "Helvetica Neue", 
+	    sans-serif;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+	height: auto;
+}
+
+li {
+	list-style: none;
+}
+
+label,
+article,
+aside,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+	display: block;
+}
+
+*:before,
+*:after{
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	box-sizing: border-box;
+	text-decoration: none;
+	outline-offset: 0.125em;
+}
+
+* + * {
+	margin: 1rem 0 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+ul,
+ol,
+p {
+	margin-top: 0;
+}
+
+
+/* Comment */
+.comment {
+	background: #FFF;
 }

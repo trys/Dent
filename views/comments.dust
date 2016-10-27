@@ -1,14 +1,16 @@
 {>"header"/}
 
+	<h3>{comments.length} comment{@eq key=comments value=1}{:else}s{/eq}</h3>
+
 	<ul class="comments">
 		{#comments}
 			{>"partials/comment"/}
 		{/comments}
 	</ul>
 
-	<form method="POST" action="/">
+	<form method="POST" action="/" data-dent>
 		<label for="comment">Add a comment</label>
-		<input type="text" id="comment" name="comment" placeholder="Write something..." />
+		<input type="text" id="comment" name="comment" placeholder="Write something..." required />
 		<input type="submit" value="Send Comment" />
 	</form>
 

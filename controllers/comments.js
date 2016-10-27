@@ -19,8 +19,11 @@ module.exports.comments = function(req, res) {
 
 module.exports.commentsPost = function(req, res) {
 
-	var dataComments = require('../data/comments.json');
+	if ( ! req.body.comment ) {
+		return res.redirect('/');
+	}
 
+	var dataComments = require('../data/comments.json');
 	var newComment = {
 		name: 'Trys Mudford',
 		comment: req.body.comment,

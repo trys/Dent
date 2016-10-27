@@ -1,9 +1,9 @@
 <li class="comment">
-	<h3>{name}</h3>
+	{! <h3>{name}</h3> !}
 	<p>{comment}</p>
-	<time datetime="{date}">{relativeDate}</time>
+	{! <time datetime="{date}">{relativeDate}</time>
 	<footer class="comment__meta">
 		<strong>{likes}</strong> <span>Like{@eq key=likes value=1}{:else}s{/eq} </span>
 		<strong>{@gt key=replies value=0}{replies}{/gt}</strong> <span>Repl{@gt key=replies value=1}ies{:else}y{/gt}</span>
-	</footer>
+	</footer> !}
 </li>
