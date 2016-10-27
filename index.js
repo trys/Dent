@@ -14,7 +14,9 @@ fs.readdirSync('./controllers').forEach(function (file) {
   }
 });
 
-app.engine('dust', dust.engine());
+app.engine('dust', dust.engine({
+	useHelpers: true
+}));
 app.set('view engine', 'dust');
 app.set('views', path.resolve(__dirname, './views'));
 app.use(express.static( __dirname + '/public' ));
@@ -22,6 +24,4 @@ app.use(express.static( __dirname + '/public' ));
 app.get('/', controllers.index);
 app.get('*', controllers.error);
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
-});
+app.listen(3000);

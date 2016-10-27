@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js -e js,dust"
   },
   "keywords": [],
   "author": "Trys Mudford",
@@ -13,7 +13,8 @@
   "dependencies": {
     "compression": "^1.6.2",
     "express": "^4.14.0",
-    "express-dustjs": "^1.1.1"
+    "express-dustjs": "^1.1.1",
+    "sugar": "^2.0.1"
   },
   "devDependencies": {
     "nodemon": "^1.10.2"
