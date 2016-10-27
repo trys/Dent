@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js -e js,dust"
+    "start": "nodemon index.js -e js,dust,json"
   },
   "keywords": [],
   "author": "Trys Mudford",
   "license": "ISC",
   "private": true,
   "dependencies": {
+    "body-parser": "^1.15.2",
     "compression": "^1.6.2",
     "express": "^4.14.0",
     "express-dustjs": "^1.1.1",

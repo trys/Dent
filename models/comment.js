@@ -21,7 +21,19 @@ Comment.prototype.setupModel = function () {
 Comment.prototype.createRelativeDate = function () {
 	if ( this.date ) {
 		this.relativeDate = Sugar.Date(this.date).relative().raw;
+		this.tidyUpDate('years', 'yr');
+		this.tidyUpDate('minutes', 'min');
+		this.tidyUpDate('months', 'mo');
+		this.tidyUpDate('days', 'days');
+		this.tidyUpDate('hours', 'hr');
+		this.tidyUpDate('seconds', 'sec');
+		this.tidyUpDate(' from now', '');
+
 	}
+};
+
+Comment.prototype.tidyUpDate = function (from, to) {
+	this.relativeDate = this.relativeDate.replace(from, to);
 };
 
 module.exports.Comment = Comment;

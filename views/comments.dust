@@ -1,0 +1,15 @@
+{>"header"/}
+
+	<ul class="comments">
+		{#comments}
+			{>"partials/comment"/}
+		{/comments}
+	</ul>
+
+	<form method="POST" action="/">
+		<label for="comment">Add a comment</label>
+		<input type="text" id="comment" name="comment" placeholder="Write something..." />
+		<input type="submit" value="Send Comment" />
+	</form>
+
+{>"footer"/}
